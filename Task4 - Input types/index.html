@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Task four</title>
+    <style>
+      body {
+        font-family: "Raleway", sans-serif;
+        font-size: 16px;
+      }
+
+      table,
+      th,
+      td {
+        border: 2px solid #555;
+        border-collapse: collapse;
+        padding: 10px;
+      }
+
+      table,
+      h1 {
+        margin: 50px;
+      }
+
+      .center {
+        text-align: center;
+        background-color: rgb(81, 129, 217);
+      }
+
+      tr:nth-child(even) {
+        background-color: rgb(140, 201, 234);
+      }
+
+      th {
+        color: white;
+      }
+
+      textarea {
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form elements</h1>
+    <table>
+      <thead class="center">
+        <tr>
+          <th>Description</th>
+          <th>Input example</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>type="button"</td>
+          <td><input type="button" value="Click me" /></td>
+          <td>Needs value attribut for button text.</td>
+        </tr>
+        <tr>
+          <td>type="checkbox"</td>
+          <td>
+            <label for="one"></label>
+            <input type="checkbox" id="one" value="1" />
+            1<br />
+            <label for="two"></label>
+            <input type="checkbox" id="two" value="2" /> 2<br />
+            <label for="three"></label>
+            <input type="checkbox" id="three" value="3" /> 3
+          </td>
+          <td>
+            Textbox text is placed after input tag. You can also replace the
+            text with label. Remember to use the name attribute!
+          </td>
+        </tr>
+        <tr>
+          <td>type="color"</td>
+          <td><input type="color" value="#FF2233" /></td>
+          <td>
+            type="color" is not supported in IE11 or older, or Safari 9.1 or
+            older.
+          </td>
+        </tr>
+        <tr>
+          <td>type="date"</td>
+          <td><input type="date" /></td>
+          <td>type="date" is not supported in IE9 and earlier.</td>
+        </tr>
+        <tr>
+          <td>type="email"</td>
+          <td><input type="email" placeholder="Enter your name" /></td>
+          <td>type="email" is not supported in IE9 and earlier.</td>
+        </tr>
+        <tr>
+          <td>type="file"</td>
+          <td><input type="file" name="myfile" /></td>
+          <td>
+            This type is for defining a file-select field and a "Browse" button
+            for file uploads.
+          </td>
+        </tr>
+        <tr>
+          <td>type="hidden"</td>
+          <td><input type="hidden" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type="number"</td>
+          <td><input type="number" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type="password"</td>
+          <td><input type="password" /></td>
+          <td>
+            The characters in a password field are masked (shown as asterisks or
+            circles).
+          </td>
+        </tr>
+        <tr>
+          <td>type="radio"</td>
+          <td>
+            <input type="radio" name="radio" id="gaga" /> Radio Gaga<br />
+            <input type="radio" name="radio" id="gugu" /> Radio Gugu
+          </td>
+          <td>Radio buttons allow you to choose only on option.</td>
+        </tr>
+        <tr>
+          <td>type="range"</td>
+          <td><input type="range" min="0" max="25" /></td>
+          <td>
+            You can restrict the range by using min and max attributes.
+            type="range" is not supported in IE9 and earlier.
+          </td>
+        </tr>
+        <tr>
+          <td>type="reset"</td>
+          <td><input type="reset" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type="search"</td>
+          <td><input type="search" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type="submit"</td>
+          <td><input type="submit" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type="tel"</td>
+          <td><input type="tel" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type="text"</td>
+          <td><input type="text" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type="time"</td>
+          <td><input type="time" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type="url"</td>
+          <td><input type="url" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type="month"</td>
+          <td><input type="month" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>type="week"</td>
+          <td><input type="week" /></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td class="center" colspan="3">Select and Textarea:</td>
+        </tr>
+        <tr>
+          <td>Select example</td>
+          <td>
+            <select name="songs">
+              <option value="chachacha">Cha Cha Cha</option>
+              <option value="bohemian">Bohemian Rhapsody</option>
+              <option value="titanic">My Heart Will Go On</option>
+              <option value="sash">Equador</option>
+            </select>
+          </td>
+          <td>
+            By default this creates a dropdown tah allows the user one choice.
+          </td>
+        </tr>
+        <tr>
+          <td>Textarea example</td>
+          <td>
+            <textarea name="longtext" id="long" cols="30" rows="6"></textarea>
+          </td>
+          <td>
+            The size of a text area can be specified by the cols and rows
+            attributes, /td>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="center" colspan="3"></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

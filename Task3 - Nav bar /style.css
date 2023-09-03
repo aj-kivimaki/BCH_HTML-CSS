@@ -1,0 +1,136 @@
+/* - - - General - - - */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: #333;
+}
+
+h1 {
+    margin-bottom: 32px;
+}
+
+h2 {
+    text-align: center;
+}
+
+section {
+    padding: 32px;
+}
+
+img {
+    height: 200px;
+    width: auto;
+}
+
+/* - - - Header - - - */
+
+header {
+    background: #222;
+    text-align: right;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+header li {
+    display: inline-block;
+    color: white;
+}
+
+ul li a {
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+li a:hover {
+    color: orange;
+    background-color: white;
+}
+
+/* - - - Table - - - */
+
+table {
+    border-collapse: collapse;
+}
+
+thead {
+    color: white;
+    background-color: orange;
+}
+
+
+td, th {
+    width: 200px;
+    padding: 5px;
+    border: 2px solid white;
+    text-align: left;
+}
+
+th {
+    border-bottom: 5px solid white;
+    padding: 7px;
+}
+
+.bg-color {
+    background-color: antiquewhite;
+}
+
+/* - - - Boxes - - - */
+
+#boxes {
+    background-image: url(https://source.unsplash.com/1600x900/?nature,water);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: center/cover;
+    height: 100vh;
+}
+
+.box {
+    background: white;
+    display: inline-block;
+    margin: 32px;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 100px;
+}
+
+.box1 {
+    background: purple;
+    border: 4px dotted white;
+}
+
+.box2 {
+    background: lightskyblue;
+    border: 4px double white;
+}
+
+.box3 {
+    background: olive;
+    border-top: 8px groove lightgreen;
+    border-bottom: 8px groove blue;
+    border-right: 8px groove yellow;
+    border-left: 8px groove red;
+}
+
+.box4 {
+    background: lightgreen;
+    border: 8px dashed white;
+    border-radius: 15px;
+}
+
+.box5 {
+    background: lightcoral;
+    border-radius: 50%;
+    border: 3px dotted white;
+}
+

@@ -1,0 +1,152 @@
+/* - - - General - - - */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #444;
+    margin: 0 20px;
+}
+
+/* rgb(249, 170, 73) oranssi */
+
+h1 {
+    text-align: center;
+    font-size: 42px;
+    color: white;
+}
+
+h2 {
+    padding: 40px 0;
+    font-size: 48px;
+    text-align: center;
+}
+
+h3 {
+    padding: 20px;
+}
+
+img {
+    width: 300px;
+    float: left;
+    padding: 15px;
+}
+
+section {
+    margin: 0 0px;
+    padding: 80px 10px;
+    min-height: 65vh;
+}
+
+/* - - - Header - - - */
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+    background-image: url(/Portfolio/pics/field.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.85;
+}
+
+.myName {
+    border-bottom: 1px solid #999;
+}
+
+nav {
+    text-align: center;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 30px 40px;
+}
+
+ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(185, 114, 64);
+    background-color: white;
+}
+
+.logo {
+    height: 35px;
+    width: auto;
+    display: inline-block;
+    background-color: white;
+}
+
+.section--background-color {
+    background-color: rgb(236, 232, 232);
+}
+
+/* - - - Footer - - - */
+
+label {
+    display: inline-block;
+    color: white;
+    margin-bottom: 7px;
+}
+
+.copy {
+    text-align: center;
+    margin-top: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 5px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+textarea {
+    resize: none;
+}
+
+footer .form-group {
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #333;
+}
+
+footer h3 {
+    text-align: center;
+    color: white;
+}
+
+footer .form {
+    margin: 0 auto;
+    width: 60%;
+}
+
+button {
+    box-shadow: none;
+    padding: 15px 50px;
+    color: white;
+    background-color: rgb(72, 80, 96);
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 40px;
+}
+
+footer .copy {
+    margin-top: 3px;
+    background: linear-gradient(35deg, rgb(174, 173, 173) 0 50%, rgb(70, 80, 97) 50% 100%);
+}
+

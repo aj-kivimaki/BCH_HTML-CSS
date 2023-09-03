@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(55, 102, 73);
+    color: #333;
+}
+
+#container {
+    margin: 40px auto; /* You have to give the width for this to work */
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.form-wrap {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+.form-group label {
+    display: block;
+    font-size: 11px;
+    margin-bottom: 5px;
+    text-align: left;
+    padding: 5px 15px 0 0;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: 5px;
+}
+
+.form-group input,
+.form-group button {
+    font-family: 'Raleway', sans-serif;
+}
+
+.form-wrap button {
+    background-color: rgb(255, 116, 60);
+    border-style: none;
+    padding: 10px 80px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
+.form-wrap h1 {
+    font-weight: 500;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.form-wrap .policy {
+    font-size: 12px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+#container a,
+footer a {
+    color: rgb(255, 149, 108);
+    text-decoration: none;
+}
+
+#container a:hover,
+footer a:hover,
+button:hover {
+    color: rgb(0, 136, 154);
+}
+
+footer {
+    margin: 20px auto;
+    width: 300px;
+    color: white;
+}
