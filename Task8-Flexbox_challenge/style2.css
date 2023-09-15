@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+}
+
+ul {
+    justify-content: space-between;
+    min-height: 12.5vh;
+    list-style-type: none;
+    background-color: pink;
+    display: flex;
+}
+
+.site-title {
+    background-color: yellow;
+    width: 50%;
+}
+
+.pm {
+    font-size: 24px;
+    border: 2px solid white;
+}
+
+nav {
+    width: 50%;
+}
+
+li {
+    width: 25vw;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+}
+
+section {
+    width: 75%;
+}
+
+aside {
+    width: 25%;
+}
+
+/* SECTION */
+
+.post-title {
+    background-color: rgb(92, 130, 188);
+    min-height: 12.5vh;
+}
+
+.section-post-container {
+    display: flex;
+}
+
+.post-meta {
+    background-color: lightgreen;
+    min-height: 62.5vh;
+    width: 25%;
+}
+
+.main-content-container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.main-content {
+    background-color: lightgrey;
+    min-height: 25vh;
+}
+
+.main-content-img {
+    background-color: yellow;
+    min-height: 37.5vh;
+}
+
+/* ASIDE */
+
+.side-bar {
+    background-color: orange;
+    min-height: 25vh;
+}
+
+.ads {
+    background-color: green;
+    min-height: 25vh;
+}
+
+.other-stuff {
+    background-color: violet;
+    min-height: 25vh;
+}
+
+/* FOOTER */
+
+footer {
+    min-height: 12.5vh;
+    width: 100%;
+    background-color: brown;
+}
