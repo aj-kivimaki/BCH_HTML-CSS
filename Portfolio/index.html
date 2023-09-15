@@ -33,10 +33,44 @@
   </head>
   <body>
     <header>
-      <div class="myName">
-        <a href="#banner"><h2>Atte Kivimäki</h2></a>
+      <div class="nameAndMenu">
+        <div class="myName">
+          <a href="#banner"><h2>Atte Kivimäki</h2></a>
+        </div>
+        <nav class="main-nav">
+          <ul>
+            <li>
+              <a href="#projects">PROJECTS</a>
+            </li>
+            <li>
+              <a href="#about">ABOUT ME</a>
+            </li>
+            <li>
+              <a href="#skills">SKILLS</a>
+            </li>
+            <li>
+              <a href="#contact">CONTACT</a>
+            </li>
+            <li>
+              <a
+                href="https://www.bc.fi/"
+                target="_blank"
+                title="Business College Helsinki"
+                >BCH</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          class="hamburger"
+          href="javascript:void(0);"
+          class="icon"
+          onclick="toggleHamburger()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
       </div>
-      <nav>
+      <nav class="mobile-nav">
         <ul>
           <li>
             <a href="#projects">PROJECTS</a>
@@ -68,89 +102,103 @@
           <h1>Welcome to my Portfolio!</h1>
           <p>
             I'm a web developer. Please check out my
-            <a href="#projects">work!</a>
+            <a href="#projects"><span class="work">work!</span></a>
           </p>
         </div>
       </section>
 
       <section id="projects">
-        <div class="project-card">
-          <div>
-            <a href="#"
-              ><img src="/Portfolio/pics/projects.jpeg" alt="projects"
-            /></a>
-            <h3>Project 1</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
-              rerum ratione deserunt possimus non sed laboriosam quaerat
-              accusantium animi in?
-            </p>
-          </div>
-          <a class="read-more" href="#">READ MORE</a>
+        <div class="title">
+          <h3>PROJECTS</h3>
         </div>
-        <div class="project-card">
-          <div>
-            <a href="#"
-              ><img src="/Portfolio/pics/projects.jpeg" alt="projects"
-            /></a>
-            <h3>Project 2</h3>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint,
-              cum magni quo sit minus ab.
-            </p>
+        <div class="projects-container">
+          <div class="project-card">
+            <div>
+              <a href="#"
+                ><img src="/Portfolio/pics/projects.jpeg" alt="projects"
+              /></a>
+              <h3>Project 1</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
+                rerum ratione deserunt possimus non sed laboriosam quaerat
+                accusantium animi in?
+              </p>
+            </div>
+            <a class="read-more" href="#">READ MORE</a>
           </div>
-          <a class="read-more" href="#">READ MORE</a>
-        </div>
-        <div class="project-card">
-          <div>
-            <a href="#"
-              ><img src="/Portfolio/pics/projects.jpeg" alt="projects"
-            /></a>
-            <h3>Project 3</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Similique, veniam?
-            </p>
+          <div class="project-card">
+            <div>
+              <a href="#"
+                ><img src="/Portfolio/pics/projects.jpeg" alt="projects"
+              /></a>
+              <h3>Project 2</h3>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint,
+                cum magni quo sit minus ab.
+              </p>
+            </div>
+            <a class="read-more" href="#">READ MORE</a>
           </div>
-          <a class="read-more" href="#">READ MORE</a>
+          <div class="project-card">
+            <div>
+              <a href="#"
+                ><img src="/Portfolio/pics/projects.jpeg" alt="projects"
+              /></a>
+              <h3>Project 3</h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Similique, veniam?
+              </p>
+            </div>
+            <a class="read-more" href="#">READ MORE</a>
+          </div>
         </div>
       </section>
 
       <section id="about">
-        <div class="about">
+        <div class="title">
           <h3>ABOUT ME</h3>
-          <img src="/Portfolio/pics/coding.jpg" alt="about me" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
-            autem iure fugiat beatae soluta sapiente, aliquam optio vero. Et
-            modi cum similique ipsa facilis dolorum officiis voluptate placeat
-            natus aliquid eaque, veniam numquam vitae assumenda est ut iure
-            excepturi ducimus obcaecati totam architecto! Dolores, harum!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis
-            distinctio eveniet harum est quas expedita unde vitae cupiditate
-            architecto at ad quaerat atque, nisi qui explicabo repellat placeat
-            officiis alias.
-          </p>
+        </div>
+        <div class="about-container">
+          <div class="about">
+            <img src="/Portfolio/pics/coding.jpg" alt="about me" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
+              autem iure fugiat beatae soluta sapiente, aliquam optio vero. Et
+              modi cum similique ipsa facilis dolorum officiis voluptate placeat
+              natus aliquid eaque, veniam numquam vitae assumenda est ut iure
+              excepturi ducimus obcaecati totam architecto! Dolores, harum!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Veritatis distinctio eveniet harum est quas expedita unde vitae
+              cupiditate architecto at ad quaerat atque, nisi qui explicabo
+              repellat placeat officiis alias.
+            </p>
+          </div>
         </div>
       </section>
 
       <section id="skills">
-        <div class="skill-card">
-          <i class="fa fa-html5"></i>
-          <label for="html">HTML5</label>
-          <meter id="html" min="0" max="1" value="0.8">80%</meter>
+        <div class="title">
+          <h3>SKILLS</h3>
         </div>
-        <div class="skill-card">
-          <i class="fa fa-css3"></i>
-          <label class="css" for="css">CSS3</label>
-          <meter id="css" min="0" max="1" value="0.6">60%</meter>
-        </div>
-        <div class="skill-card">
-          <i class="fa-brands fa-js"></i>
-          <label for="js">JS</label>
-          <meter id="js" min="0" max="1" value="0.7">70%</meter>
+        <div class="skills-container">
+          <div class="skill-card">
+            <i class="fa fa-html5"></i>
+            <label for="html">HTML5</label>
+            <meter id="html" min="0" max="1" value="0.8">80%</meter>
+          </div>
+          <div class="skill-card">
+            <i class="fa fa-css3"></i>
+            <label class="css" for="css">CSS3</label>
+            <meter id="css" min="0" max="1" value="0.6">60%</meter>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-js"></i>
+            <label for="js">JS</label>
+            <meter id="js" min="0" max="1" value="0.7">70%</meter>
+          </div>
         </div>
       </section>
     </main>
@@ -178,8 +226,8 @@
             placeholder="leave me a message..."
           ></textarea>
         </div>
-        <div class="button">
-          <button type="submit">SEND</button>
+        <div>
+          <button class="button" type="submit">SEND</button>
         </div>
       </form>
       <div id="top-btn">

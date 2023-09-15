@@ -13,18 +13,14 @@ img {
     width: 100%;
 }
 
-a {
-    color: #333;
-    text-decoration: none;
-}
-
-a:hover {
-    color: rgb(185, 114, 64);
-}
-
 body {
     font-family: 'Raleway', sans-serif;
     color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 
 section {
@@ -39,14 +35,10 @@ footer {
 /* -- header -- */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.85);
     padding: 1rem 2rem;
     z-index: 1;
 }
@@ -58,19 +50,52 @@ header h2 {
     font-weight: normal;
 }
 
-/* -- nav -- */
+header .nameAndMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-nav {
+/* -- main nav -- */
+
+.main-nav {
     text-align: center;
 }
 
-nav ul {
+.main-nav ul {
     display: flex;
+    justify-content: center;
 }
 
-nav li {
+.main-nav li {
     list-style-type: none;
     padding: 0 1rem;
+}
+
+
+/* -- mobile nav -- */
+
+.mobile-nav {
+    display: none;
+}
+
+.mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.mobile-nav li {
+    color: #333;
+    list-style-type: none;
+    text-align: left;
+    margin-top: 2px;
+    padding: 5px;
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
 }
 
 /* -- main -- */
@@ -89,12 +114,6 @@ nav li {
     text-align: center;
 }
 
-#banner a {
-    color: rgb(255, 209, 6);
-    font-weight: bold;
-    text-decoration: none;
-}
-
 #banner h1 {
     margin: 20px;
     font-size: 40px;
@@ -108,12 +127,41 @@ nav li {
     margin: 40px;
 }
 
+#banner .work {
+    color: rgb(255, 149, 0);
+    text-transform: uppercase;
+}
+
+#banner .work:hover {
+    color: rgb(69, 77, 91);
+}
+
 /* -- projects -- */
 
 #projects,
 #skills {
     min-height: 100vh;
-    background-color: #e3e3e3;
+}
+
+#projects {
+    /* background-image: url('./pics/bg-structure.jpg'); */
+    background-size: cover;
+}
+
+
+.title {
+    padding: 30px 0 80px 50px;
+    font-size: 24px;
+    color: #333333;
+}
+
+.projects-container {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(3px);
+}
+
+.projects-container,
+.skills-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -135,16 +183,13 @@ nav li {
     width: 250px;
     height: 430px;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .project-card h3,
 .project-card p {
-    padding-top: 15px;
+    padding-top: 35px;
     margin: 0 10px;
-}
-
-.project-card a {
-    font-size: 12px;
 }
 
 .project-card .read-more {
@@ -152,14 +197,25 @@ nav li {
     margin-bottom: 15px;
 }
 
+.project-card a {
+    font-size: 12px;
+}
+
+.read-more a:hover {
+    background-color: rgb(255, 149, 0);
+    color: white;
+}
+
 .project-card img {
     border-radius: 5px 5px 0 0;
     object-fit: cover;
     transition: opacity 0.3s ease-in-out;
+    transition: transform 0.8s;
 }
 
 .project-card img:hover {
     opacity: 0.8;
+    transform: scale(1.15);
 }
 
 /* -- about -- */
@@ -169,27 +225,21 @@ nav li {
     position: relative;
 }
 
-#about::before {    
+#about::after {    
     content: "";
-    background-image: url('/Portfolio/pics/about.jpeg');
     background-size: cover;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
     position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
+    background-image: url('/Portfolio/pics/about.jpeg');
+    filter: grayscale(100%);
     opacity: 0.1;
 }
 
 .about {
     width: 85%;
     margin: 0 auto;
-    color: #333;
-}
-
-.about h3 {
-    font-size: 30px;
-    margin: 50px 0 35px 0;
     color: #333;
 }
 
@@ -207,6 +257,7 @@ nav li {
     float: left;
     margin-right: 15px;
     margin-bottom: 10px;
+    z-index: 1;
 }
 
 /* -- skills -- */
@@ -251,17 +302,19 @@ nav li {
     background: rgb(255, 149, 0);
 }
 
-/* -- button -- */
+/* -- back to top -button -- */
 
 #top-btn {
-    margin: 0 auto;
+    margin-left: auto;
 }
 
 .top-button {
-    width: 200px;
-    margin-bottom: 20px;
+    width: 190px;
+    margin-bottom: 40px;
+    margin-right: 25px;
     background-color: rgb(255, 149, 0);
     color: #333;
+    font-size: 16px;
 }
 
 .top-button:hover {
@@ -322,6 +375,10 @@ button {
     margin: 15px 0;
 }
 
+.button:hover {
+    color: rgb(255, 149, 0);
+}
+
 .copy {
     text-align: center;
     font-size: 12px;
@@ -334,13 +391,17 @@ button {
 /* -- media queries -- */
 
 @media screen and (max-width: 760px) {
-    nav {
+
+    .main-nav {
         display: none;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
 
-@media screen and (max-width: 400px) {
-    header {
-        display: none;
-    }
-}
+
+
+S/* kills section background comes through the pic 
+check all hover colors for links and buttons */
