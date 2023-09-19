@@ -12,9 +12,11 @@
       name="description"
       content="Web Developer Portfolio | Atte Kivimäki"
     />
-    <title>Portfolio | Web Developer</title>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <https://teams.microsoft.com/l/message/19:206b337ebb89416b9990de41af7e0154@thread.tacv2/1695023890448?tenantId=b92633c2-3e28-4b95-996f-c4a2dce4f53b&amp;groupId=ddbfe108-5b19-493b-9157-2bd3d409352c&amp;parentMessageId=1695023890448&amp;teamName=REACT23S&amp;channelName=ProgrammingJavaScript&amp;createdTime=1695023890448&amp;allowXTenantAccess=false>
     <link
       rel="stylesheet"
       href="./fontawesome-free-6.4.2-web/css/all.min.css"
@@ -30,60 +32,22 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700&family=Viaoda+Libre&display=swap"
       rel="stylesheet"
     />
+    <title>Portfolio | Web Developer</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <header>
-      <div class="nameAndMenu">
-        <div class="myName">
-          <a href="#banner"><h2>Atte Kivimäki</h2></a>
-        </div>
-        <nav class="main-nav">
-          <ul>
-            <li>
-              <a href="#projects">PROJECTS</a>
-            </li>
-            <li>
-              <a href="#about">ABOUT ME</a>
-            </li>
-            <li>
-              <a href="#skills">SKILLS</a>
-            </li>
-            <li>
-              <a href="#contact">CONTACT</a>
-            </li>
-            <li>
-              <a
-                href="https://www.bc.fi/"
-                target="_blank"
-                title="Business College Helsinki"
-                >BCH</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <a
-          class="hamburger"
-          href="javascript:void(0);"
-          class="icon"
-          onclick="toggleHamburger()"
-        >
-          <i class="fa fa-bars"></i>
-        </a>
+      <div id="logo">
+        <h2><a href="#banner">Atte Kivimäki</a></h2>
       </div>
-      <nav class="mobile-nav">
+      <nav>
+        <button class="mobile material-symbols-outlined">menu</button>
         <ul>
-          <li>
-            <a href="#projects">PROJECTS</a>
-          </li>
-          <li>
-            <a href="#about">ABOUT ME</a>
-          </li>
-          <li>
-            <a href="#skills">SKILLS</a>
-          </li>
-          <li>
-            <a href="#contact">CONTACT</a>
-          </li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#about">ABOUT ME</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
           <li>
             <a
               href="https://www.bc.fi/"
@@ -100,10 +64,8 @@
       <section id="banner">
         <div>
           <h1>Welcome to my Portfolio!</h1>
-          <p>
-            I'm a web developer. Please check out my
-            <a href="#projects"><span class="work">work!</span></a>
-          </p>
+          <p>I'm a Web Developer.</p>
+          <button class="btn"><a href="#projects">PROJECTS</a></button>
         </div>
       </section>
 
@@ -111,12 +73,14 @@
         <div class="title">
           <h3>PROJECTS</h3>
         </div>
-        <div class="projects-container">
+        <div class="projects-cards">
           <div class="project-card">
             <div>
-              <a href="#"
-                ><img src="/Portfolio/pics/projects.jpeg" alt="projects"
-              /></a>
+              <div class="card-img">
+                <a href="#"
+                  ><img src="./pics/projects.jpeg" alt="projects"
+                /></a>
+              </div>
               <h3>Project 1</h3>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore
@@ -128,9 +92,11 @@
           </div>
           <div class="project-card">
             <div>
-              <a href="#"
-                ><img src="/Portfolio/pics/projects.jpeg" alt="projects"
-              /></a>
+              <div class="card-img">
+                <a href="#"
+                  ><img src="./pics/projects.jpeg" alt="projects"
+                /></a>
+              </div>
               <h3>Project 2</h3>
               <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint,
@@ -141,9 +107,11 @@
           </div>
           <div class="project-card">
             <div>
-              <a href="#"
-                ><img src="/Portfolio/pics/projects.jpeg" alt="projects"
-              /></a>
+              <div class="card-img">
+                <a href="#"
+                  ><img src="./pics/projects.jpeg" alt="projects"
+                /></a>
+              </div>
               <h3>Project 3</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -151,6 +119,17 @@
               </p>
             </div>
             <a class="read-more" href="#">READ MORE</a>
+          </div>
+          <div class="project-card social-media-links">
+            <a href="https://github.com/aj-kivimaki" target="_blank"
+              ><i class="fa-brands fa-square-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/atte-kivim%C3%A4ki-74568a171/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#contact"><i class="fa-solid fa-envelope"></i></a>
           </div>
         </div>
       </section>
@@ -161,7 +140,7 @@
         </div>
         <div class="about-container">
           <div class="about">
-            <img src="/Portfolio/pics/coding.jpg" alt="about me" />
+            <img src="./pics/coding.jpg" alt="about me" />
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
               autem iure fugiat beatae soluta sapiente, aliquam optio vero. Et
@@ -196,8 +175,18 @@
           </div>
           <div class="skill-card">
             <i class="fa-brands fa-js"></i>
-            <label for="js">JS</label>
+            <label for="js">JavaScript</label>
             <meter id="js" min="0" max="1" value="0.7">70%</meter>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-react"></i>
+            <label class="css" for="react">React</label>
+            <meter id="react" min="0" max="1" value="0.25">25%</meter>
+          </div>
+          <div class="skill-card">
+            <i class="fa-brands fa-node-js"></i>
+            <label for="node">Node.js</label>
+            <meter id="node" min="0" max="1" value="0.1">10%</meter>
           </div>
         </div>
       </section>
@@ -223,24 +212,16 @@
             id="message"
             cols="20"
             rows="7"
-            placeholder="leave me a message..."
+            placeholder="type a message..."
           ></textarea>
         </div>
         <div>
-          <button class="button" type="submit">SEND</button>
+          <button class="btn" type="submit">SEND</button>
         </div>
       </form>
-      <div id="top-btn">
-        <button
-          type="button"
-          onclick="location.href='#banner'"
-          class="top-button"
-        >
-          Back to Top
-        </button>
-      </div>
       <div class="copy">
-        <p>Copyright &#169; My Website 2023</p>
+        <small>Copyright &#169; 2023</small>
+        <button id="backToTop" class="btn">BACK TO TOP</button>
       </div>
     </footer>
   </body>

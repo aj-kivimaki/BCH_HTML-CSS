@@ -1,21 +1,40 @@
-const body = document.querySelector('body');
+const backToTopBtn = document.querySelector('#backToTop');
+const hamburger = document.querySelector('.mobile');
+
 const header = document.querySelector('header');
-const headerH2 = document.querySelector('header h2');
-const links = document.querySelectorAll('a');
+const menuItems = document.querySelectorAll('nav ul li a');
+const nav = document.querySelector('nav ul');
 
-window.addEventListener('scroll', (e) => {
-    header.style.backgroundColor = 'rgba(255, 255, 255, 0.85)';
-    headerH2.style.color = '#333';
-    for (const link of links) {
-        link.style.color = '#333';
+const getToTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+const mobMenu = () => {
+    /* closes the menu when clicked */
+    for (const item of menuItems) {
+        item.addEventListener('click', mobMenu);
     }
-})
+    // toggle showing mobile menu when clicking hamburger icon
+    nav.classList.toggle('responsive');
+}
 
-const toggleHamburger = () => {
-    let x = document.querySelector(".mobile-nav");
-    if (x.style.display === "block") {
-        x.style.display = "none";
+const scrollFunc = (e) => {
+    // add background color to header after scrolling
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        header.classList.add('bg');
     } else {
-        x.style.display = "block";
+        header.classList.remove('bg');
+    }
+
+    // show back to top button after a short scroll
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
     }
 }
+
+backToTopBtn.addEventListener('click', getToTop);
+hamburger.addEventListener('click', mobMenu);
+window.addEventListener('scroll', scrollFunc);
