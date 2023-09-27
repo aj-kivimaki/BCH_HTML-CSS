@@ -1,72 +1,90 @@
 /* -- general -- */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-tap-highlight-color: transparent;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(255, 255, 255);
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
 a:hover {
-    color: rgb(255, 149, 0);
+  color: rgb(255, 149, 0);
 }
 
 header {
-    padding: 1.5rem;
+  padding: 1.5rem;
 }
 
 section {
-    /* unable the header to cover the content */
-    scroll-margin-block: 70px;
-    min-width: 320px;
-    padding: 6rem 1rem;
+  /* unables the header to cover the content */
+  scroll-margin-block: 70px;
+  min-width: 320px;
+  padding: 6rem 1rem;
 }
 
 /* -- header -- */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
 header li {
-    display: inline-block;
-    margin: 0 1rem;
+  display: inline-block;
+  margin: 0 1rem;
 }
 
 header li,
 #logo {
-    list-style-type: none;
+  list-style-type: none;
 }
 
-
 #logo {
-    font-family: 'Viaoda Libre', cursive;
-    font-weight: normal;
-    font-size: 1.4rem;
+  font-family: "Viaoda Libre", cursive;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+.on-scroll {
+  background-color: #454d5bf2;
+}
+
+.on-scroll #logo {
+  font-size: 1rem;
+  transition: font-size 0.8s;
+}
+
+.mobile {
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  display: none;
+  color: white;
 }
 
 /* -- main -- */
@@ -76,326 +94,316 @@ header li,
 #skills,
 #about,
 #contact {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .title {
-    padding: 30px 50px;
-    font-size: 36px;
-    color: rgb(69, 77, 91);
+  padding: 30px 50px;
+  font-size: 36px;
+  color: #454d5b;
 }
 
 /* -- banner -- */
 
 #banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('./pics/field.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./pics/field.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
 }
 
 #banner h1 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 #banner p {
-    font-size: 18px;
-    margin: 40px;
+  font-size: 18px;
+  margin: 40px;
 }
 
 #banner button:hover {
-    color: rgb(255, 149, 0);
-    background-color: white;
+  color: #ff9500;
+  background-color: white;
 }
 
 /* -- projects -- */
 
 .projects-cards,
 .skills-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
-    padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding-bottom: 100px;
 }
 
 .project-card,
 .skill-card {
-    border-radius: 5px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: rgb(240, 240, 240);
-    color: #333;
-    display: flex;
-    flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: rgb(248, 248, 248);
+  color: #333;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card {
-    width: 250px;
-    height: 430px;
-    justify-content: space-between;
-    overflow: hidden;
-    color: #555;
+  width: 250px;
+  height: 430px;
+  justify-content: space-between;
+  overflow: hidden;
+  color: #555;
 }
 
 .project-card a {
-    color: #555;
-    transition: transform 0.4s;
+  color: #555;
+  transition: transform 0.4s;
 }
 
 .project-card a:hover {
-    color: rgb(255, 149, 0);
-    transform: scale(1.15);
+  color: rgb(255, 149, 0);
+  transform: scale(1.15);
 }
 
 .project-card .card-img {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .project-card h3,
 .project-card p {
-    padding-top: 10px;
-    margin: 10px;
+  padding-top: 10px;
+  margin: 10px;
 }
 
 .project-card .read-more {
-    text-align: center;
-    margin-bottom: 10px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 .project-card a {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .project-card img {
-    border-radius: 5px 5px 0 0;
-    object-fit: cover;
-    transition: transform 0.6s;
+  border-radius: 5px 5px 0 0;
+  object-fit: cover;
+  transition: transform 0.6s;
 }
 
 .project-card img:hover {
-    transform: scale(1.5);
+  transform: scale(1.5);
 }
 
 .social-media-links {
-    align-items: center;
-    justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .social-media-links .fa-brands,
 .social-media-links .fa-solid {
-    color: rgb(69, 77, 91);
-    font-size: 64px;
+  color: #454d5b;
+  font-size: 64px;
 }
 
 .social-media-links .fa-brands:hover,
 .social-media-links .fa-solid:hover {
-    color: rgb(255, 149, 0);
+  color: rgb(255, 149, 0);
 }
 
 /* -- about -- */
 
 #about {
-    background-color: rgb(240, 240, 240);
+  background-color: rgb(248, 248, 248);
 }
 
 .about-container {
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 }
 
 .about {
-    width: 85%;
-    margin: 0 auto;
-    color: #555;
+  width: 85%;
+  margin: 0 auto;
+  color: #555;
 }
 
 .about p {
-    margin-bottom: 20px;
-    font-size: 20px;
-    line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
 .about img {
-    height: 200px;
-    max-width: 300px;
-    border-radius: 5px;
-    object-fit: cover;
-    float: left;
-    margin-right: 15px;
-    margin-bottom: 10px;
+  height: 200px;
+  max-width: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 10px;
 }
 
 /* -- skills -- */
 
 .skill-card {
-    width: 200px;
-    height: 250px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+  width: 200px;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .skill-card:nth-child(even) {
-    background-color: rgb(69, 77, 91);
+  background-color: rgb(69, 77, 91);
 }
 
 .skill-card:nth-child(odd) {
-    background-color: rgb(255, 255, 255);
+  background-color: #f8f8f8;
 }
 
 .skill-card .fa,
 .skill-card .fa-brands {
-    color: rgb(255, 149, 0);
-    font-size: 60px;
+  color: rgb(255, 149, 0);
+  font-size: 60px;
 }
 
 .skill-card .css {
-    color: white;
+  color: white;
 }
 
 .skill-card meter {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 .skill-card label {
-    color: #555;
-    text-align: center;
-    margin-top: 10px;
+  color: #555;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .skill-card meter::-webkit-meter-optimum-value {
-    background: rgb(255, 149, 0);
+  background: rgb(255, 149, 0);
+  z-index: 1;
 }
 
 /* -- footer -- */
 
 #contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    background-color: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-color: #f8f8f8;
 }
 
 .form,
 .top-btn {
-    margin: 120px auto;
-    min-width: 60%;
+  margin: 120px auto;
+  min-width: 60%;
 }
 
 .form {
-    padding: 50px;
-    background-color: rgb(109, 119, 138);
+  padding: 50px;
+  background-color: #6d778a;
+  border-radius: 5px;
 }
 
 .form-group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .form h3 {
-    font-size: 30px;
-    margin-bottom: 40px;
-    color: white;
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: white;
 }
 
 label {
-    display: inline-block;
-    color: white;
-    margin-bottom: 5px;
-    width: 140px;
+  display: inline-block;
+  color: white;
+  margin-bottom: 5px;
+  width: 140px;
 }
 
 input,
 textarea {
-    padding: 10px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    min-width: 250px;
-    width: 60%;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  min-width: 250px;
+  width: 60%;
 }
 
 textarea {
-    resize: none;
-    vertical-align: top;
+  resize: none;
+  vertical-align: top;
 }
 
 .btn {
-    box-shadow: none;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: white;
-    font-size: inherit;
-    font-family: inherit;
-    background-color: orange;
+  box-shadow: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 1.6rem;
+  color: white;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: orange;
 }
 
 .btn:hover {
-    background-color: white;
-    color: rgb(255, 149, 0);
+  background-color: white;
+  color: rgb(255, 149, 0);
+}
+
+.copy {
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 5px;
+  color: white;
+  background-color: rgb(69, 77, 91);
 }
 
 /* -- back to top button -- */
 
-.mobile {
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
-    display: none;
-    color: white;
-}
-
 #backToTop {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    display: none;
+  position: fixed;
+  bottom: 4rem;
+  right: 3rem;
+  display: none;
 }
 
 #backToTop:hover {
-    color: white;
-    background-color: rgb(69, 77, 91);
-}
-
-.copy {
-    text-align: center;
-    font-size: 12px;
-    line-height: 12px;
-    padding: 5px;
-    color: white;
-    background-color: rgb(69, 77, 91);
-}
-
-.bg {
-    background-color: rgba(69, 77, 91, 0.95);
+  color: white;
+  background-color: rgb(69, 77, 91);
 }
 
 /* -- media queries -- */
 
-@media (max-width: 740px) {
+@media (max-width: 860px) {
+  nav ul {
+    display: none;
+  }
 
-    nav ul {
-        display: none;
-    }
+  .mobile {
+    display: block;
+  }
 
-    .mobile {
-        display: block;
-    }
+  ul.responsive {
+    display: block;
+    background-color: rgba(69, 77, 91, 0.95);
+    position: absolute;
+    left: 10px;
+    top: 95px;
+    width: 150px;
+    padding-top: 1rem;
+    border-radius: 5px;
+  }
 
-    ul.responsive {
-        display: block;
-        background-color: rgba(69, 77, 91, 0.95);
-        position: absolute;
-        left: 0;
-        top: 95px;
-        width: 100%;
-        padding-top: 1rem;
-    }
-
-    ul.responsive li {
-        display: block;
-        margin-bottom: 1rem;
-    }
+  ul.responsive li {
+    display: block;
+    margin-bottom: 1rem;
+  }
 }
