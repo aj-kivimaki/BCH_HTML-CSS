@@ -1,0 +1,45 @@
+:root {
+  --primary-color: teal;
+  --secondary-color: steelblue;
+  --neutral-color: cornsilk;
+  --dark-color: #333;
+  --light-color: #fff;
+  --font: "Arial, Helvetica, sans-serif";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--neutral-color);
+  color: var(--light-color);
+  margin: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+
+.item {
+  background: var(--primary-color);
+  min-height: 200px;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: filter ease 0.5s;
+}
+
+.item {
+  filter: brightness(0.5) blur(5px);
+}
+
+.item:hover {
+  filter: drop-shadow(8px 8px 8px black);
+}
